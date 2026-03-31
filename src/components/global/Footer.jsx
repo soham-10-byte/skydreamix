@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import logo from '../../assets/logo.webp';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
   Mail, 
@@ -105,8 +106,8 @@ const Footer = () => {
           
           {/* Column 1: Brand & Tagline */}
           <div className="footer-section space-y-10">
-            <Link to="/" className="text-2xl font-black tracking-[-0.08em] text-white flex items-center gap-1">
-              SKYDREAMIX<span className="w-1.5 h-1.5 bg-[#00E5FF] rounded-full" />
+            <Link to="/" className="flex items-center gap-2 group">
+              <img src={logo} alt="SKYDREAMIX Logo" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
             </Link>
             <p className="text-white/40 text-xs leading-relaxed font-medium uppercase tracking-widest max-w-[280px]">
               Your trusted technology partner offering web development, mobile apps, custom software, digital marketing, and SEO to drive business growth.
