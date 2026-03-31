@@ -30,13 +30,13 @@ const ServiceHero = ({ data }) => {
 
   return (
     <section 
-      className="relative w-full h-[50vh] min-h-[500px] flex items-center overflow-x-hidden overflow-y-visible border-b border-white/5 pt-32 pb-20 sm:pt-40 sm:pb-24 lg:py-24"
+      className="relative w-full h-[50vh] min-h-[500px] flex items-center overflow-x-hidden overflow-y-visible border-b border-white/5 pt-24 pb-20 sm:pt-32 sm:pb-24 lg:py-24"
       style={{ backgroundImage: data.gradient }}
     >
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-primary/40 pointer-events-none backdrop-blur-[2px]" />
 
-      <div className="container mx-auto px-6 sm:px-12 lg:px-24 w-full xl:max-w-[1280px] relative z-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
+      <div className="container mx-auto px-6 sm:px-12 w-full xl:max-w-[1280px] relative z-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
         
         {/* Left Side: Content */}
         <div>
@@ -44,7 +44,7 @@ const ServiceHero = ({ data }) => {
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-xs font-semibold text-gray-500 uppercase tracking-widest mb-6"
+            className="flex items-center gap-2 text-xs font-semibold text-gray-500 uppercase tracking-widest mb-4"
           >
             <Link to="/services" className="hover:text-white transition-colors">Services</Link>
             <span>/</span>
