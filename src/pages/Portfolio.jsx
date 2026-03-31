@@ -36,7 +36,7 @@ const getListVariants = (worldId) => {
         animate: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring", bounce: 0.5 } }, 
         exit 
       };
-    case 'SOFTWARE':
+    case 'CUSTOM SOFTWARE':
       return { 
         initial: { opacity: 0, scale: 0.95 }, 
         animate: { opacity: 1, scale: 1, transition: { duration: 0.4 } }, 
@@ -48,7 +48,7 @@ const getListVariants = (worldId) => {
         animate: { opacity: 1, scale: 1, rotate: 0, transition: { duration: 0.6 } }, 
         exit 
       };
-    case 'GRAPHICS':
+    case 'GRAPHICS DESIGN':
       return { 
         initial: { opacity: 0, scale: 1.1 }, 
         animate: { opacity: 1, scale: 1, transition: { duration: 0.5 } }, 
@@ -98,9 +98,9 @@ const Portfolio = () => {
     switch(activeWorld.id) {
       case 'WEB & DIGITAL': return <WebCard key={project.id} project={project} onClick={handleProjectClick} />;
       case 'MOBILE': return <MobileCard key={project.id} project={project} onClick={handleProjectClick} />;
-      case 'SOFTWARE': return <SoftwareCard key={project.id} project={project} onClick={handleProjectClick} />;
+      case 'CUSTOM SOFTWARE': return <SoftwareCard key={project.id} project={project} onClick={handleProjectClick} />;
       case 'MARKETING': return <MarketingCard key={project.id} project={project} onClick={handleProjectClick} />;
-      case 'GRAPHICS': return <GraphicsCard key={project.id} project={project} onClick={handleProjectClick} />;
+      case 'GRAPHICS DESIGN': return <GraphicsCard key={project.id} project={project} onClick={handleProjectClick} />;
       default: return <AllCard key={project.id} project={project} onClick={handleProjectClick} />;
     }
   };
